@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>研究プロフィール</title>
+    <style>
+      :root {
+        --bg: #f8f9fa; /* 明るいグレー */
+        --accent: #2c3e50; /* 深い紺 */
+        --gold: #b08d57; /* 真鍮色 */
+        --card-bg: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+        background-color: var(--bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        max-width: 900px;
+        width: 100%;
+        border-radius: 4px; /* 哲学的な硬さを出すためあえて角を丸めすぎない */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        display: flex; /* 横並びレイアウト */
+        flex-direction: row;
+        overflow: hidden;
+      }
+
+      /* モバイル対応：画面が狭いときは縦に並べる */
+      @media (max-width: 768px) {
+        .card {
+          flex-direction: column;
+        }
+      }
+
+      .hero-wrap {
+        flex: 0 0 28%; /* 左側28%を画像エリアに */
+        position: relative;
+        background: var(--accent);
+      }
+
+      .hero {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+      }
+
+      .content {
+        flex: 1;
+        padding: 48px;
+        color: #333;
+      }
+
+      .name {
+        font-size: 32px;
+        color: var(--accent);
+        margin-bottom: 4px;
+        border-bottom: 2px solid var(--gold);
+        display: inline-block;
+      }
+
+      .theme {
+        font-size: 16px;
+        color: #666;
+        margin: 8px 0;
+      }
+
+      .section-title {
+        font-size: 20px;
+        margin: 32px 0 16px;
+        padding-left: 10px;
+        border-left: 4px solid var(--gold);
+        color: var(--accent);
+      }
+
+      .sub-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gold);
+        margin-top: 20px;
+      }
+
+      .list {
+        list-style: none;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      .list li {
+        margin-bottom: 12px;
+        line-height: 1.7;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .list li::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="below">
+        <div class="hero-wrap">
+          <img class="hero" src="aristotle.png" alt="アリストテレスの像と書物" />
+        </div>
+        <div class="content">
+          <h1 class="name">名前：中山 朋美</h1>
+          <p class="theme">研究テーマ：アリストテレスの知識論</p>
+          <p class="theme">所属先：名古屋大学人文学研究科哲学研究室</p>
+          <div class="achievements">
+          <h2 class="section-title">業績</h2>
+          <h3 class="sub-title">論文</h3>
+          <ul class="list">
+            <li>「『ニコマコス倫理学』における探求の出発点と習慣」『名古屋大学哲学論集20』、2026年出版予定</li>
+          </ul>
+          <h3 class="sub-title">学会発表</h3>
+          <ul class="list">
+            <li>「アリストテレスの倫理学における探求の方法について」中部哲学会2024年大会</li>
+            <li>「『ニコマコス倫理学』における探求と教育の関係について」2025年度 名古屋大学哲学会</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </main>
+  </body>
+</html>
