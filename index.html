@@ -30,27 +30,22 @@
         border-radius: 4px; /* 哲学的な硬さを出すためあえて角を丸めすぎない */
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         display: flex; /* 横並びレイアウト */
-        flex-direction: row;
+        flex-direction: column;
         overflow: hidden;
       }
 
-      /* モバイル対応：画面が狭いときは縦に並べる */
-      @media (max-width: 768px) {
-        .card {
-          flex-direction: column;
-        }
-      }
-
       .hero-wrap {
-        flex: 0 0 28%; /* 左側28%を画像エリアに */
+        flex: 0 0 auto;
         position: relative;
         background: var(--accent);
+        width: 100%;
       }
 
       .hero {
         width: 100%;
-        height: 100%;
+        height: 350px;
         object-fit: cover;
+        object-position: center 15%;
         opacity: 0.9;
       }
 
@@ -113,27 +108,39 @@
   </head>
   <body>
     <main class="card">
-      <div class="below">
-        <div class="hero-wrap">
-          <img class="hero" src="aristotle.png" alt="アリストテレスの像と書物" />
-        </div>
-        <div class="content">
-          <h1 class="name">名前：中山 朋美</h1>
-          <p class="theme">研究テーマ：アリストテレスの知識論</p>
-          <p class="theme">所属先：名古屋大学人文学研究科哲学研究室</p>
-          <div class="achievements">
-          <h2 class="section-title">業績</h2>
-          <h3 class="sub-title">論文</h3>
-          <ul class="list">
-            <li>「『ニコマコス倫理学』における探求の出発点と習慣」『名古屋大学哲学論集20』、2026年出版予定</li>
-          </ul>
-          <h3 class="sub-title">学会発表</h3>
-          <ul class="list">
-            <li>「アリストテレスの倫理学における探求の方法について」中部哲学会2024年大会</li>
-            <li>「『ニコマコス倫理学』における探求と教育の関係について」2025年度 名古屋大学哲学会</li>
-          </ul>
-        </div>
+      <div class="hero-wrap">
+        <img class="hero" src="aristotle.png" alt="アリストテレスの像と書物" />
       </div>
+      <div class="content">
+        <h1 class="name">名前：中山 朋美</h1>
+        <p class="theme">研究テーマ：アリストテレスの知識論</p>
+        <p class="theme">所属先：名古屋大学人文学研究科哲学研究室</p>
+
+        <h2 class="section-title">業績</h2>
+        <h3 class="sub-title">論文</h3>
+        <ul class="list">
+          <li>「『ニコマコス倫理学』における探求の出発点と習慣」『名古屋大学哲学論集20』、2026年出版予定</li>
+        </ul>
+        <h3 class="sub-title">学会発表</h3>
+        <ul class="list">
+          <li>「アリストテレスの倫理学における探求の方法について」中部哲学会2024年大会</li>
+          <li>「『ニコマコス倫理学』における探求と教育の関係について」2025年度 名古屋大学哲学会</li>
+        </ul>
+
+        <h2 class="section-title">学位・資格</h2>
+        <ul class="list">
+          <li>修士（文学）（2026年3月 名古屋大学）</li>
+          <li>学士（文化学科）（2024年3月 福岡大学）</li>
+        </ul>
+
+        <h2 class="section-title">連絡先</h2>
+        <p class="theme">example.com</p>
+
+        <h2 class="section-title">学歴</h2>
+        <ul class="list">
+          <li>2026 名古屋大学 人文学研究科 博士前期（哲学）</li>
+          <li>2024 福岡大学 文化学科 学士</li>
+        </ul>
       </div>
     </main>
   </body>
